@@ -144,8 +144,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
-<!-- jQuery -->
+@auth
+<script>
+    window.user = @json(auth()->user());
+    //console.log('window.user');
+</script>
+@endauth
 <script src="/js/app.js"></script>
 </body>
 </html>
